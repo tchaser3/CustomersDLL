@@ -1,0 +1,511 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C0ABB199-D52A-41A0-9BBE-576D4BA5B05E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CustomersDLL</RootNamespace>
+    <AssemblyName>CustomersDLL</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="NewEventLogDLL">
+      <HintPath>..\..\Blue Jay Class Library\NewEventLogDLL.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CustomerAddressesDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CustomerAddressesDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CustomersClass.cs" />
+    <Compile Include="CustomersDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CustomersDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindActiveCustomerByAccountNumberDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindActiveCustomerByAccountNumberDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindAddressByAddressesDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindAddressByAddressesDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindAddressByAddressIDDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindAddressByAddressIDDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindAddressByWorkZoneDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindAddressByWorkZoneDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindAddressByZoneIDDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindAddressByZoneIDDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindCustomerAddressDateMatchDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindCustomerAddressDateMatchDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindCustomerByAccountNumberDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindCustomerByAccountNumberDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindCustomerByCustomerIDDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindCustomerByCustomerIDDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindCustomerByPhoneNumberDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindCustomerByPhoneNumberDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindCustomersByAddressIDDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindCustomersByAddressIDDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindCustomersSortedByAccountNumberDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindCustomersSortedByAccountNumberDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindWorkZoneByZoneIDDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindWorkZoneByZoneIDDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindWorkZoneByZoneNameDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindWorkZoneByZoneNameDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindWorkZoneCitiesByZoneIDDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindWorkZoneCitiesByZoneIDDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindWorkZoneCityByCityDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindWorkZoneCityByCityDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindWorkZoneCityByZipCodeDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindWorkZoneCityByZipCodeDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindWorkZonesDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindWorkZonesDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="InsertCustomerAddressEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InsertCustomerAddressEntry.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="InsertCustomerEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InsertCustomerEntry.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="InsertWorkZoneCityEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InsertWorkZoneCityEntry.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="InsertWorkZoneEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InsertWorkZoneEntry.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateCustomerAddressEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UpdateCustomerAddressEntry.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateCustomerEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UpdateCustomerEntry.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateWorkZoneCityZoneIDEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UpdateWorkZoneCityZoneIDEntry.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="WorkZoneCityDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WorkZoneCityDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="WorkZoneDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WorkZoneDataSet.xsd</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="CustomerAddressesDataSet.xsc">
+      <DependentUpon>CustomerAddressesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CustomerAddressesDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CustomerAddressesDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CustomerAddressesDataSet.xss">
+      <DependentUpon>CustomerAddressesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CustomersDataSet.xsc">
+      <DependentUpon>CustomersDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CustomersDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CustomersDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CustomersDataSet.xss">
+      <DependentUpon>CustomersDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindActiveCustomerByAccountNumberDataSet.xsc">
+      <DependentUpon>FindActiveCustomerByAccountNumberDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindActiveCustomerByAccountNumberDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindActiveCustomerByAccountNumberDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindActiveCustomerByAccountNumberDataSet.xss">
+      <DependentUpon>FindActiveCustomerByAccountNumberDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindAddressByAddressesDataSet.xsc">
+      <DependentUpon>FindAddressByAddressesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindAddressByAddressesDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindAddressByAddressesDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindAddressByAddressesDataSet.xss">
+      <DependentUpon>FindAddressByAddressesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindAddressByAddressIDDataSet.xsc">
+      <DependentUpon>FindAddressByAddressIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindAddressByAddressIDDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindAddressByAddressIDDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindAddressByAddressIDDataSet.xss">
+      <DependentUpon>FindAddressByAddressIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindAddressByWorkZoneDataSet.xsc">
+      <DependentUpon>FindAddressByWorkZoneDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindAddressByWorkZoneDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindAddressByWorkZoneDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindAddressByWorkZoneDataSet.xss">
+      <DependentUpon>FindAddressByWorkZoneDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindAddressByZoneIDDataSet.xsc">
+      <DependentUpon>FindAddressByZoneIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindAddressByZoneIDDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindAddressByZoneIDDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindAddressByZoneIDDataSet.xss">
+      <DependentUpon>FindAddressByZoneIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindCustomerAddressDateMatchDataSet.xsc">
+      <DependentUpon>FindCustomerAddressDateMatchDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindCustomerAddressDateMatchDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindCustomerAddressDateMatchDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindCustomerAddressDateMatchDataSet.xss">
+      <DependentUpon>FindCustomerAddressDateMatchDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindCustomerByAccountNumberDataSet.xsc">
+      <DependentUpon>FindCustomerByAccountNumberDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindCustomerByAccountNumberDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindCustomerByAccountNumberDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindCustomerByAccountNumberDataSet.xss">
+      <DependentUpon>FindCustomerByAccountNumberDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindCustomerByCustomerIDDataSet.xsc">
+      <DependentUpon>FindCustomerByCustomerIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindCustomerByCustomerIDDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindCustomerByCustomerIDDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindCustomerByCustomerIDDataSet.xss">
+      <DependentUpon>FindCustomerByCustomerIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindCustomerByPhoneNumberDataSet.xsc">
+      <DependentUpon>FindCustomerByPhoneNumberDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindCustomerByPhoneNumberDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindCustomerByPhoneNumberDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindCustomerByPhoneNumberDataSet.xss">
+      <DependentUpon>FindCustomerByPhoneNumberDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindCustomersByAddressIDDataSet.xsc">
+      <DependentUpon>FindCustomersByAddressIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindCustomersByAddressIDDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindCustomersByAddressIDDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindCustomersByAddressIDDataSet.xss">
+      <DependentUpon>FindCustomersByAddressIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindCustomersSortedByAccountNumberDataSet.xsc">
+      <DependentUpon>FindCustomersSortedByAccountNumberDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindCustomersSortedByAccountNumberDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindCustomersSortedByAccountNumberDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindCustomersSortedByAccountNumberDataSet.xss">
+      <DependentUpon>FindCustomersSortedByAccountNumberDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindWorkZoneByZoneIDDataSet.xsc">
+      <DependentUpon>FindWorkZoneByZoneIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindWorkZoneByZoneIDDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindWorkZoneByZoneIDDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindWorkZoneByZoneIDDataSet.xss">
+      <DependentUpon>FindWorkZoneByZoneIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindWorkZoneByZoneNameDataSet.xsc">
+      <DependentUpon>FindWorkZoneByZoneNameDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindWorkZoneByZoneNameDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindWorkZoneByZoneNameDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindWorkZoneByZoneNameDataSet.xss">
+      <DependentUpon>FindWorkZoneByZoneNameDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindWorkZoneCitiesByZoneIDDataSet.xsc">
+      <DependentUpon>FindWorkZoneCitiesByZoneIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindWorkZoneCitiesByZoneIDDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindWorkZoneCitiesByZoneIDDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindWorkZoneCitiesByZoneIDDataSet.xss">
+      <DependentUpon>FindWorkZoneCitiesByZoneIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindWorkZoneCityByCityDataSet.xsc">
+      <DependentUpon>FindWorkZoneCityByCityDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindWorkZoneCityByCityDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindWorkZoneCityByCityDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindWorkZoneCityByCityDataSet.xss">
+      <DependentUpon>FindWorkZoneCityByCityDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindWorkZoneCityByZipCodeDataSet.xsc">
+      <DependentUpon>FindWorkZoneCityByZipCodeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindWorkZoneCityByZipCodeDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindWorkZoneCityByZipCodeDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindWorkZoneCityByZipCodeDataSet.xss">
+      <DependentUpon>FindWorkZoneCityByZipCodeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindWorkZonesDataSet.xsc">
+      <DependentUpon>FindWorkZonesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindWorkZonesDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindWorkZonesDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindWorkZonesDataSet.xss">
+      <DependentUpon>FindWorkZonesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="InsertCustomerAddressEntry.xsc">
+      <DependentUpon>InsertCustomerAddressEntry.xsd</DependentUpon>
+    </None>
+    <None Include="InsertCustomerAddressEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InsertCustomerAddressEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="InsertCustomerAddressEntry.xss">
+      <DependentUpon>InsertCustomerAddressEntry.xsd</DependentUpon>
+    </None>
+    <None Include="InsertCustomerEntry.xsc">
+      <DependentUpon>InsertCustomerEntry.xsd</DependentUpon>
+    </None>
+    <None Include="InsertCustomerEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InsertCustomerEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="InsertCustomerEntry.xss">
+      <DependentUpon>InsertCustomerEntry.xsd</DependentUpon>
+    </None>
+    <None Include="InsertWorkZoneCityEntry.xsc">
+      <DependentUpon>InsertWorkZoneCityEntry.xsd</DependentUpon>
+    </None>
+    <None Include="InsertWorkZoneCityEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InsertWorkZoneCityEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="InsertWorkZoneCityEntry.xss">
+      <DependentUpon>InsertWorkZoneCityEntry.xsd</DependentUpon>
+    </None>
+    <None Include="InsertWorkZoneEntry.xsc">
+      <DependentUpon>InsertWorkZoneEntry.xsd</DependentUpon>
+    </None>
+    <None Include="InsertWorkZoneEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InsertWorkZoneEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="InsertWorkZoneEntry.xss">
+      <DependentUpon>InsertWorkZoneEntry.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="UpdateCustomerAddressEntry.xsc">
+      <DependentUpon>UpdateCustomerAddressEntry.xsd</DependentUpon>
+    </None>
+    <None Include="UpdateCustomerAddressEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UpdateCustomerAddressEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UpdateCustomerAddressEntry.xss">
+      <DependentUpon>UpdateCustomerAddressEntry.xsd</DependentUpon>
+    </None>
+    <None Include="UpdateCustomerEntry.xsc">
+      <DependentUpon>UpdateCustomerEntry.xsd</DependentUpon>
+    </None>
+    <None Include="UpdateCustomerEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UpdateCustomerEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UpdateCustomerEntry.xss">
+      <DependentUpon>UpdateCustomerEntry.xsd</DependentUpon>
+    </None>
+    <None Include="UpdateWorkZoneCityZoneIDEntry.xsc">
+      <DependentUpon>UpdateWorkZoneCityZoneIDEntry.xsd</DependentUpon>
+    </None>
+    <None Include="UpdateWorkZoneCityZoneIDEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UpdateWorkZoneCityZoneIDEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UpdateWorkZoneCityZoneIDEntry.xss">
+      <DependentUpon>UpdateWorkZoneCityZoneIDEntry.xsd</DependentUpon>
+    </None>
+    <None Include="WorkZoneCityDataSet.xsc">
+      <DependentUpon>WorkZoneCityDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="WorkZoneCityDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>WorkZoneCityDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="WorkZoneCityDataSet.xss">
+      <DependentUpon>WorkZoneCityDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="WorkZoneDataSet.xsc">
+      <DependentUpon>WorkZoneDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="WorkZoneDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>WorkZoneDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="WorkZoneDataSet.xss">
+      <DependentUpon>WorkZoneDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
